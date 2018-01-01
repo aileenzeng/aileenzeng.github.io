@@ -108,7 +108,7 @@ a {
 
 #cat {
     position: relative;
-    left: 675px;
+    padding-top: 10px;
     width: 32px;
     height: 32px;
 }
