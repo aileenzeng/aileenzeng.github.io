@@ -108,10 +108,10 @@ a {
 
 .footer-section {
     display: flex;
-    width: 100px;
+    width: 200px;
     text-align: center;
     color: white;
     font-weight: lighter;
     padding-top: 9px;
-    padding-left: 50%;
+    padding-left: 45%;
 }
