@@ -34,12 +34,24 @@ a {
     border-bottom: 5px solid #6B0000;
 }
 
+#red-border:hover {
+    border-bottom: 5px solid #CF0000;
+}
+
 #orange-border {
     border-bottom: 5px solid #6B2700;
 }
 
+#orange-border:hover {
+    border-bottom: 5px solid #E35200
+}
+
 #yellow-border {
     border-bottom: 5px solid #6B5A00;
+}
+
+#yellow-border:hover {
+    border-bottom: 5px solid #DEBA00;
 }
 
 #green-border {

@@ -34,6 +34,10 @@ a {
     border-bottom: 5px solid #6B0000;
 }
 
+#red-border:hover {
+    border-bottom: 5px solid #CF0000;
+}
+
 #orange-border {
     border-bottom: 5px solid #E35200;
 }
@@ -42,8 +46,16 @@ a {
     border-bottom: 5px solid #6B5A00;
 }
 
+#yellow-border:hover {
+    border-bottom: 5px solid #DEBA00;
+}
+
 #green-border {
     border-bottom: 5px solid #006B0B;
+}
+
+#green-border:hover {
+    border-bottom: 5px solid #00C414;
 }
 
 #github {

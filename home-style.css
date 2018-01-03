@@ -38,12 +38,24 @@ a {
     border-bottom: 5px solid #6B2700;
 }
 
+#orange-border:hover {
+    border-bottom: 5px solid #E35200
+}
+
 #yellow-border {
     border-bottom: 5px solid #6B5A00;
 }
 
+#yellow-border:hover {
+    border-bottom: 5px solid #DEBA00;
+}
+
 #green-border {
     border-bottom: 5px solid #006B0B;
+}
+
+#green-border:hover {
+    border-bottom: 5px solid #00C414;
 }
 
 #github {
@@ -67,9 +79,8 @@ a {
     top: 270px;
     left: 300px;
     width: 670px;
-    height: 140px;
     background-color: rgba(13, 13, 13, 0.5);
-    padding: 15px 15px 15px 15px;
+    padding: 15px;
     color: white;
 }
 
