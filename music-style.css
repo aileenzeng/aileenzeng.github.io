@@ -58,6 +58,17 @@ a {
     border-bottom: 5px solid #00C414;
 }
 
+.banner {
+    position: fixed;
+    top: 40px;
+    width: 100%;
+    height: 200px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 #github {
     position: absolute;
     width: 32px;
@@ -66,58 +77,75 @@ a {
     right: 10px;
 }
 
-.content {
+.banner {
     position: fixed;
     top: 40px;
+    width: 100%;
+    height: 200px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#banner-image {
+    background-image: url("images/music.png");
+}
+
+.content {
+    background-color: #1F1F1F;
+    top: 240px;
     left: 0px;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 280px);
+    position: relative;
+    overflow-x: hidden;
+    padding-bottom: 100px;
 }
 
-.content-box {
-    position: absolute;
-    top: 85px;
-    left: 55px;
-    width: 440px;
-    background-color: rgba(13, 13, 13, 0.5);
-    padding: 15px 15px 25px 15px;
+.title {
     color: white;
-}
-
-.description {
-    padding-top: 10px;
-    font-weight: lighter;
-}
-
-.media-box {
-    position: absolute;
-    top: 305px;
-    left: 55px;
-    width: 440px;
-    background-color: rgba(13, 13, 13, 0.5);
-    padding: 15px 15px 25px 15px;
-    color: white;
-    border-radius: 30px;
-}
-
-.media-title {
-    padding-bottom: 10px;
-    font-size: 20px;
-    font-weight: lighter;
+    padding-top: 50px;
+    padding-bottom: 20px;
     text-align: center;
-}
-#concerto {
-    width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    font-family: serif;
+    font-size: 40px;
 }
 
-#background {
-    height: 100%;
-    width: 100%;
-    filter: brightness(50%);
+@media only screen and (max-width: 690px) {
+    /* for mobile and small screens */
 }
+
+@media only screen and (min-width: 960px) {
+    /* for large screens */
+}
+
+.row {
+    margin: 8px -16px;
+    display: inline-block;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 240px;
+    height: 350px;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 
 .footer {
     position: fixed;
@@ -128,12 +156,14 @@ a {
     background: #1F1F1F;
 }
 
-.footer-section {
-    display: flex;
+.footer-text {
+    position: fixed;
     width: 200px;
     text-align: center;
     color: white;
     font-weight: lighter;
-    padding-top: 9px;
-    padding-left: 45%;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    margin-left: calc(50% - 100px);
+    margin-right: 50%;
 }

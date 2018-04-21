@@ -66,69 +66,189 @@ a {
     right: 10px;
 }
 
-.content {
+.banner {
+    position: fixed;
     top: 40px;
-    left: 0px;
-    height: 100%;
     width: 100%;
-    position: absolute;
-    background: #2B2242;
-    margin-top: 0px;
-    padding-top: 60px;
+    height: 200px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.project-box {
-    display: flex;
-    padding-top: 20px;
-    padding-left: 60px;
-    background: #2B2242; /* workaround */
+#banner-image {
+    background-image: url("images/keyboard.jpg");
 }
 
-.project-description {
-    width: 700px;
-    padding: 20px;
-    border-radius: 30px;
-    background: rgba(0, 0, 0, 0.5);
+.content {
+    background-color: #1F1F1F;
+    top: 240px;
+    left: 0px;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    padding-bottom: 100px;
+}
+
+.title {
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: serif;
+    font-size: 40px;
+}
+
+@media only screen and (max-width: 690px) {
+    /* for mobile and small screens */
+}
+
+@media only screen and (min-width: 960px) {
+    /* for large screens */
+}
+
+.row {
+    margin: 8px -16px;
+    display: inline-block;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 240px;
+    height: 350px;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* source: https://davidwalsh.name/css-flip */
+/* entire container, keeps perspective */
+.flip-container {
+    perspective: 1000px;
+}
+	/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+    width: 100%;
+    height: 350px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+    background-color: rgb(50, 50, 50);
+	z-index: 2;
+	/* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+    background-color:rgb(15, 15, 15);
+    transform: rotateY(180deg);
     color: white;
     font-weight: lighter;
 }
 
-.title {
-    font-size: 32px;
+.project-front {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    align-content:center;
+    background-repeat: no-repeat;
 }
 
-.description-1 {
-    font-size: 16px;
+.project-title {
+    padding-top: 15px;
+    font-size: 30px;
+    text-align: center;
 }
 
-.description-2 {
-    font-size: 16px;
-    margin-top: 15px;
+.project-description {
+    padding: 15px 15px 5px 15px;
+    font-size: 13px;
 }
 
-.project-media {
-    height: 215px;
-    margin-left: 20px;
-    border-radius: 30px;
-    box-shadow: 0px 0px 2px 2px darkgrey;
+.project-team {
+    position: fixed;
+    top: 300px;
+    padding-left: 15px;
+    padding-right: 60px;
+    font-size: 10px;   
 }
 
-#icon {
-    height: 215px;
-    border-radius: 30px;
+#coffee-image {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("images/coffee.png");
+    background-position-y: 50%;
+    background-position-x: 50%;
+    background-size: cover;
+}
+
+#picaroon-image {
+    background-image: url("images/picaroon.png");
+    background-position-y: 50%;
+    background-position-x: 50%;
+    background-size: cover;
+}
+
+#supernatural-image {
+    background-image: url("images/supernatural.png");
+    background-position-y: 50%;
+    background-position-x: 50%;
+    background-size: cover;   
+}
+
+#fireworks-image {
+    background-image: url("images/fireworks.png");
+    background-position-y: 50%;
+    background-position-x: 50%;
+    background-size: cover;   
+}
+
+#game-image {
+    background-image: url("images/2048.png");
+    background-position-y: 50%;
+    background-position-x: 50%;
+    background-size: cover;   
 }
 
 #cat {
-    position: relative;
-    padding-top: 10px;
+    position: fixed;
+    top: 300px;
+    right: 15px;
     width: 32px;
     height: 32px;
-}
-
-.bottom-buffer {
-    width: 100%;
-    height: 80px;
-    background: #2B2242;
 }
 
 .footer {
@@ -140,12 +260,14 @@ a {
     background: #1F1F1F;
 }
 
-.footer-section {
-    display: flex;
+.footer-text {
+    position: fixed;
     width: 200px;
     text-align: center;
     color: white;
     font-weight: lighter;
-    padding-top: 9px;
-    padding-left: 45%;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    margin-left: calc(50% - 100px);
+    margin-right: 50%;
 }

@@ -57,6 +57,76 @@ a {
 #green-border {
     border-bottom: 5px solid #00C414;
 }
+body {
+    margin: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #1F1F1F;
+    height: 40px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+.header-section {
+    width: 85px;
+    text-align: center;
+    padding-top: 7px;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-weight: lighter;
+    color: white;
+}
+
+a {
+    color:white;
+    background-color: transparent;
+    text-decoration: transparent;
+}
+
+#red-border {
+    border-bottom: 5px solid #6B0000;
+}
+
+#red-border:hover {
+    border-bottom: 5px solid #CF0000;
+}
+
+#orange-border {
+    border-bottom: 5px solid #6B2700;
+}
+
+#orange-border:hover {
+    border-bottom: 5px solid #E35200
+}
+
+#yellow-border {
+    border-bottom: 5px solid #6B5A00;
+}
+
+#yellow-border:hover {
+    border-bottom: 5px solid #DEBA00;
+}
+
+#green-border {
+    border-bottom: 5px solid #00C414;
+}
+
+.banner {
+    position: fixed;
+    top: 40px;
+    width: 100%;
+    height: 200px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 #github {
     position: absolute;
@@ -66,23 +136,75 @@ a {
     right: 10px;
 }
 
-.content-temp {
+.banner {
     position: fixed;
     top: 40px;
-    left: 0px;
     width: 100%;
-    height: 100%;
-    background-color: #1F1F1F;
+    height: 200px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.construction {
-    position: absolute;
-    left: 40%;
-    top: 300px;
-    text-align: center;
-    font-weight: lighter;
-    color: white;
+#banner-image {
+    background-image: url("images/pencils.png");
 }
+
+.content {
+    background-color: #1F1F1F;
+    top: 240px;
+    left: 0px;
+    width: 100%;
+    height: calc(100% - 280px);
+    position: relative;
+    overflow-x: hidden;
+    padding-bottom: 100px;
+}
+
+.title {
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: serif;
+    font-size: 40px;
+}
+
+@media only screen and (max-width: 690px) {
+    /* for mobile and small screens */
+}
+
+@media only screen and (min-width: 960px) {
+    /* for large screens */
+}
+
+.row {
+    margin: 8px -16px;
+    display: inline-block;
+}
+
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 240px;
+    height: 350px;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 
 .footer {
     position: fixed;
@@ -93,12 +215,14 @@ a {
     background: #1F1F1F;
 }
 
-.footer-section {
-    display: flex;
+.footer-text {
+    position: fixed;
     width: 200px;
     text-align: center;
     color: white;
     font-weight: lighter;
-    padding-top: 9px;
-    padding-left: 45%;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    margin-left: calc(50% - 100px);
+    margin-right: 50%;
 }
