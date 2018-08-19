@@ -1,23 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-    {% include head.html %}  
+{% include head.html %}
+
 <body>
     {% include header.html %}
-<main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <div class="home">
-<!-- <h2 class="post-list-heading">Posts</h2> -->
-    <ul class="post-list">
-      <li>
-        <p>Hello! My name is Aileen. I am a sophomore studying Computer Science at the 
-          University of Washington.
-        </p>
-        <p>Note: this site is still under construction!</p>
-      </li>
-    </ul>
-      </div>
+    <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+            {{ content }}
+        </div>
     </main>
-{% include footer.html %}
+    {% include footer.html %}
 </body>
 
 </html>

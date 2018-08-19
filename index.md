@@ -4,4 +4,7 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
 ---
-Testing 123
+Hello! My name is Aileen. I am a sophomore studying Computer Science at the 
+University of Washington.
+
+Note: this site is still under construction!
