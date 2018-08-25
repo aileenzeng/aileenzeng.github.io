@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 {% include head.html %}
-
+<head>
+    <link rel="stylesheet" href="{{site.baseurl}}/css/landing.css">
+</head>
 <body>
     {% include header.html %}
     <main class="page-content" aria-label="Content">
         <div class="wrapper">
-            {{ content }}
+            <div class="home-columns">
+                <img src="media/me.png">
+                {{content}}
+            </div>
         </div>
     </main>
     {% include footer.html %}

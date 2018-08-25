@@ -3,7 +3,6 @@ layout: page
 permalink: /blog
 title: Blog
 ---
-
 <!-- adapted from https://github.com/MvvmCross/MvvmCross/blob/master/docs/_layouts/blog.html -->
 <section class="blog">
     {% for post in site.posts %}

@@ -1,1 +1,11 @@
 /* CSS for landing page */
+.home-columns {
+    line-height: 2
+}
+
+.home-columns img {
+    width: 170px;
+    height: 100%;
+    float: left;
+    margin: 0px 15px 15px 0px;
+}
