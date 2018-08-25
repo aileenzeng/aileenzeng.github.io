@@ -1,0 +1,45 @@
+/* CSS for projects page */
+.project-columns {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
+.project-columns img {
+    width: 200px;
+    height: 200px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.project-descriptions {
+    display: block;
+}
+
+.project-descriptions project-title {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.project-descriptions date {
+    color: #828282;
+}
+
+.project-descriptions content {
+    font-weight: lighter;
+}
+
+@media screen and (max-width: 600px) {
+    .project-columns {
+        display: block;
+    }
+
+    .project-columns img {
+        margin-right: 40px;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }   
+}
