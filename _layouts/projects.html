@@ -11,124 +11,58 @@
     <main class="page-content" aria-label="Content">
         <div class="wrapper">
             <h1>Research</h1>
-            <div class="project-columns">
-                <img src="/media/sidewalk.jpg">
-                <div class="project-descriptions">
-                    <project-title>
-                        Project Sidewalk
-                    </project-title>
-                    <date>
-                        <br>May 2018 - <i>present</i>
-                    </date>
-                    <content>
-                        <br>Makeability Lab at University of Washington
-                        <br>
-                        <br>Characterizes street-level accessibility of cities using a combination of crowd-sourcing techniques, computer vision, and machine learning. I primarily work on the online tool that allows users to physically audit cities in Washington DC and label accessiblity features using JavaScript/HTML/CSS and the Google Maps API. I have also helped configure the project envioronment with Docker to deploy to production.
-                    </content>
-                </div>
-            </div>
+            {% for post in site.posts %}
+                {% if post.category == 'project' and post.project_type == 'research' %}
+                    <a href="{{ post.project_url }}"><img src="{{ post.img_path}}"></a>
+                    <div class="project-descriptions">
+                        <div class="project-title">
+                            {{ post.title | escape }}
+                        </div>
+                        <div class="date">
+                            {{ post.project_date }}
+                        </div>
+                        <div class="post-content">
+                            {{ post.content }}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
             <h1>Personal Projects</h1>
-            <div class="project-columns">
-                <img src="/media/coffee.png">
-                <div class="project-descriptions">
-                    <project-title>
-                        Coffee
-                    </project-title>
-                    <date>
-                        <br>January 2018
-                    </date>
-                    <content>
-                        <br>Team members: Lizeth R., Frank G.
-                        <br>
-                        <br>Built during BrickHack 2018. I wrote the scripts to create an auto-grader for Java programs using Python/Shell. It checks against a series of test cases, and will gives feedback to the user if the program produces unexpected results.
-                    </content>
-                </div>
-            </div>
-            <div class="project-columns">
-                <img src="/media/picaroon.png">
-                <div class="project-descriptions">
-                    <project-title>
-                        Picaroon
-                    </project-title>
-                    <date>
-                        <br>January 2017 - June 2017
-                    </date>
-                    <content>
-                        <br>Team members: Hazel P., Cameron C., Marlena R., Sage M.
-                        <br>
-                        <br>A 2.5D time-travel pirate game made using C# and Unity. The user plays as a pirate, who solves mini-levels using their ability to travel back in time. I refactored the game architecture to make time travel mechanism more robust. Additionally, I enhanced the user interface by displaying player information, such as health, charge, and timer.
-                    </content>
-                </div>
-            </div>
-            <div class="project-columns">
-                <img src="/media/supernatural.png">
-                <div class="project-descriptions">
-                    <project-title>
-                        Supernatural
-                    </project-title>
-                    <date>
-                        <br>May 2016 - July 2016
-                    </date>
-                    <content>
-                        <br>Team members: Megan R., Sakke O.
-                        <br>
-                        <br>2D platformer game based off Supernatural (television show). Originally built using Java and Slick2D, but later moved to Unity using C#. I helped create player mechanics in our original version, and moved project to Unity.
-                    </content>
-                </div>
-            </div>
+            {% for post in site.posts %}
+                {% if post.category == 'project' and post.project_type == 'personal' %}
+                    <a href="{{ post.project_url }}"><img src="{{ post.img_path}}"></a>
+                    <div class="project-descriptions">
+                        <div class="project-title">
+                            {{ post.title | escape }}
+                        </div>
+                        <div class="date">
+                            {{ post.project_date }}
+                        </div>
+                        <div class="post-content">
+                            {{ post.content }}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
             <h1>Class Projects</h1>
-            <div class="project-columns">
-                <img src="/media/mapping.png">
-                <div class="project-descriptions">
-                    <project-title>
-                        Street Mapping
-                    </project-title>
-                    <date>
-                        <br> April 2018
-                    </date>
-                    <content>
-                        <br>Team member: Daniel M.
-                        <br>
-                        <br>Created a Java program that uses Dijkstra's algorithm to calculate the shortest paths between any two points in New York. Includes a pop-up GUI that displays all intersections traveled during the route.
-                    </content>
-                </div>
-            </div>
-            <div class="project-columns">
-                <img src="/media/2048.png">
-                <div class="project-descriptions">
-                    <project-title>
-                        2048
-                    </project-title>
-                    <date>
-                        <br>January 2018
-                        <br>
-                    </date>
-                    <content>
-                        <p>Used Java Swing to recreate the popular mobile game, 2048.
-                        </p>
-                    </content>
-                </div>
-            </div>
-            <div class="project-columns">
-                <img src="/media/fireworks.png">
-                <div class="project-descriptions">
-                    <project-title>
-                        Fireworks
-                    </project-title>
-                    <date>
-                        <br> November 2017
-                    </date>
-                    <content>
-                        <p>Created a customizable fireworks display application using Java Swing. Supports multiple fireworks
-                            and contains an interactive GUI that allows the user to select unique patterns, trajectories,
-                            and colors.
-                        </p>
-                    </content>
-                </div>
-            </div>
+            {% for post in site.posts %}
+                {% if post.category == 'project' and post.project_type == 'class' %}
+                    <a href="{{ post.project_url }}"><img src="{{ post.img_path}}"></a>
+                    <div class="project-descriptions">
+                        <div class="project-title">
+                            {{ post.title | escape }}
+                        </div>
+                        <div class="date">
+                            {{ post.project_date }}
+                        </div>
+                        <div class="post-content">
+                            {{ post.content }}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
         </div>
     </main>
     {% include footer.html %}
 </body>
-
 </html>

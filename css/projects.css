@@ -1,11 +1,12 @@
 /* CSS for projects page */
 .project-columns {
-    display: flex;
+    display: block;
     flex-direction: row;
     margin-bottom: 15px;
 }
 
-.project-columns img {
+img {
+    float: left;
     width: 200px;
     height: 200px;
     margin-right: 40px;
@@ -14,19 +15,19 @@
 }
 
 .project-descriptions {
-    display: block;
+    display: grid;
 }
 
-.project-descriptions project-title {
+.project-title {
     font-weight: 400;
     font-size: 24px;
 }
 
-.project-descriptions date {
+.date {
     color: #828282;
 }
 
-.project-descriptions content {
+.content {
     font-weight: lighter;
 }
 
@@ -35,7 +36,7 @@
         display: block;
     }
 
-    .project-columns img {
+    img {
         margin-right: 40px;
         object-fit: cover;
         display: block;

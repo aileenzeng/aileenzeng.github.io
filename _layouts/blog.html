@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+
+<head>
+    <link rel="stylesheet" href="{{site.baseurl}}/css/projects.css">
+</head>
+
+<body>
+    {% include header.html %}
+    <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+            <section class="blog">
+                {% for post in site.posts %}
+                    {% if post.category == 'blog' %}
+                    <h2 class="post-title p-name">
+                        <a class="link" href="{{ post.url | relative_url }}" role="link">{{ post.title | escape }}</a>
+                    </h2>
+                    <p class="post-meta">
+                        <time class="dt-published" itemprop="datePublished">
+                            {% assign date_format = site.date_format | default: "%b %-d, %Y" %} {{ post.date | date: date_format }}
+                        </time>
+                    </p>
+                    <p class="post-content">
+                        {{ post.content | strip_html | escape | truncatewords: 50 }}
+                        <a href="{{ post.url | relative url }}">[more]</a>
+                    </p>
+                    {% endif %}
+                {% endfor %}
+            </section>
+        </div>
+    </main>
+</body>
