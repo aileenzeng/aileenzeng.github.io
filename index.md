@@ -12,6 +12,6 @@ to on my [Projects](https://aileenzeng.github.io/projects) page!
 I previously was at the University of Rochester, where I was a Teaching Assistant for the 
 Introduction to Computer Science class (in Java).
 
-In my spare time, I like to run, prctice violin, hike, and play card games.
+In my spare time, I like to run, practice violin, hike, and play card games.
 
 Please get in touch with me! My email is <mailto:aileenz@cs.washington.edu>
