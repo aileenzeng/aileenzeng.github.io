@@ -19,7 +19,7 @@
 
 <div class="hero lazyload" data-bg="{{ site.url }}{{ site.baseurl }}/assets/img/{{ site.hero_img }}">
     <div class="hero__wrap">
-        <h1 class="hero__title">Blog</h1>
+        <h1 class="hero__title">Resume</h1>
     </div>
 </div>
 
@@ -29,7 +29,7 @@
             <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
 
                 {% for post in site.posts %}
-                    {% if post.type == 'blog' %}
+                    {% if post.type == 'project' %}
                         {% include card.html %}
                     {% endif %}
                 {% endfor %}

@@ -2,7 +2,6 @@
 title: Aileen Zeng # your site title
 author: aileenzeng # You :P
 description: > # Meta description of Homepage
-  Aileen's personal website.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://aileenzeng.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -16,7 +15,6 @@ social:
 
 # THEME SETTINGS
 navigation: # Navigation links
-  - {name: 'Home', link: '/'}
   - {name: 'Blog', link: '/blog'}
   - {name: 'Resume', link: '/resume'}
 
