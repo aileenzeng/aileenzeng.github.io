@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en-US" }}">
+
+{% include head.html %}
+<head>
+    <link rel="stylesheet" href="/css/projects.css">
+</head>
+<body class="site">
+
+{% if site.google_tag_manager %}
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+{% endif %}
+
+{% include header.html %}
+
+<div class="hero lazyload" data-bg="{{ site.url }}{{ site.baseurl }}/assets/img/{{ site.hero_img }}">
+    <div class="hero__wrap">
+        <h1 class="hero__title">Projects</h1>
+    </div>
+</div>
+
+<main class="site__content">
+    <section class="project">
+        <div class="container">
+            <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
+                <div class="post-header">
+                    <h1>Research</h1>
+                </div>
+                {% for post in site.posts %}
+                    {% if post.type == 'research' %}
+                        {% include card.html %}
+                    {% endif %}
+                {% endfor %}
+                <div class="post-header">
+                    <h1>Class Projects</h1>
+                </div>
+                {% for post in site.posts %}
+                    {% if post.type == 'class project' %}
+                        {% include card.html %}
+                    {% endif %}
+                {% endfor %}
+                <div class="post-header">
+                    <h1>Personal Projects</h1>
+                </div>
+                {% for post in site.posts %}
+                    {% if post.type == 'personal project' %}
+                        {% include card.html %}
+                    {% endif %}
+                {% endfor %}
+                <!-- {% include pagination.html %} -->
+            </div>
+        </div>
+    </section>
+</main>
+
+{% include footer.html %}
+
+</body>
+
+</html>

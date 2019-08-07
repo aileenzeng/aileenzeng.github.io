@@ -1,0 +1,9 @@
+.blur.lazyloaded {
+    width: 100%;
+    object-fit: cover;
+}
+
+.post-header {
+    display: block;
+    width: 100%;
+}

@@ -16,7 +16,7 @@ social:
 # THEME SETTINGS
 navigation: # Navigation links
   - {name: 'Blog', link: '/blog'}
-  - {name: 'Resume', link: '/resume'}
+  - {name: 'Projects', link: '/projects'}
 
 tagline: >
   Hello! I'm Aileen.
