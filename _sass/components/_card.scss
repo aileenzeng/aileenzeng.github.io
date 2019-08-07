@@ -23,7 +23,7 @@
 
     &:last-of-type,
     &:nth-child(2n+2) {
-      margin-right: 0;
+      margin-right: 2%;
     }
   }
 
@@ -32,12 +32,12 @@
     margin-right: 3.125%;
 
     &:nth-child(2n+2) {
-      margin-right: 3.125%;
+      margin-right: 2%;
     }
 
     &:last-of-type,
     &:nth-child(3n+3) {
-      margin-right: 0;
+      margin-right: 2%;
     }
   }
 
