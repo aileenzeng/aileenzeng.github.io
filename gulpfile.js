@@ -189,9 +189,6 @@ gulp.task('img', function() {
         width: 991,
         rename: { suffix: '_md' }
       }, {
-        width: 1999,
-        rename: { suffix: '_lg' }
-      }, {
         // max-width hero
         width: 1920,
       }],
